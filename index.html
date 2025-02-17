@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отчёт по профилю патентообладателя</title>
+  <link rel="stylesheet" href="src/styles.scss">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img class="header__logo--img" src="public/logo.svg" alt="">
+      <label class="header__logo--name">Logo</label>
+    </div>
+    <nav class="header__nav">
+      <a href="#">О нас</a>
+      <a href="#">Проекты</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="container__breadcrumbs">
+      <a href="#">Главная</a> / <a href="#">Ссылка на страницу</a> / Текущая страница
+    </nav>
+
+    <div class="container__title">
+      <h1>Отчёт по профилю патентообладателя</h1>
+    </div>
+
+    <form class="form" id="report-form">
+      <div class="form__group form__item--full">
+        <label>Патентообладатель:</label>
+        <input type="text" class="form__input" placeholder="Патентообладатель №1">
+      </div>
+
+      <div class="form__group form__item--date">
+        <label>Дата начала:</label>
+        <input type="date" class="form__input">
+      </div>
+
+      <div class="form__group form__item--date">
+        <label>Дата конца:</label>
+        <input type="date" class="form__input">
+      </div>
+
+      <div class="form__group form__item--interval">
+        <label>Вывод по:</label>
+        <select class="form__select">
+          <option>Месяц</option>
+          <option>Квартал</option>
+        </select>
+      </div>
+
+      <button type="submit" class="form__button form__button--submit form__item-show">Показать</button>
+      <button type="button" id="reset-btn" class="form__button form__button--reset form__item-hide">
+        <img src="public/arrow.svg" alt="">
+      </button>
+    </form>
+
+    <div class="chart-container">
+      <div class="chart-wrapper">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__column">
+      <h3>Инноваторам</h3>
+      <ul class="footer__column-list">
+        <li><a href="#">Поддержка проектов</a></li>
+        <li><a href="#">Получить патент</a></li>
+        <li><a href="#">База знаний</a></li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h3>Инвесторам</h3>
+      <ul class="footer__column-list">
+        <li><a href="#">Каталог проектов</a></li>
+        <li><a href="#">Каталог инноваций</a></li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h3>О портале</h3>
+      <ul class="footer__column-list">
+        <li><a href="#">Описание проекта</a></li>
+        <li><a href="#">Участники</a></li>
+        <li><a href="#">Контактные данные</a></li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h3>Документы</h3>
+      <ul class="footer__column-list">
+        <li><a href="#">Справочник документов</a></li>
+        <li><a href="#">Пользовательское соглашение</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <hr>
+    </div>
+    <div class="footer__info">
+      <p class="footer__info--text">
+        Проект Министерства Экономики Республики для поддержки авторов идей и предпринимателей
+      </p>
+      <div class="footer__info-list">
+        <p class="footer__info--line">г. Нью-Йорк, ул. Восьмого Марта, 13</p>
+        <p class="footer__info--line">(000) 000-00-01</p>
+        <p class="footer__info--line">dir@minec.ru</p>
+      </div>
+    </div>
+  </footer>
+
+<script type="module" src="src/main.ts"></script>
+</body>
+</html>
